@@ -85,7 +85,7 @@ template<class A, class B, class C> function<C(A)> operator*(C (&f)(B), function
   return [=](A a) { return f(g(a)); };
 }
 
-template<class A, class B> function<B(A)> const_(B b) { return [=](auto _) { return b; }; }
+template<class A, class B> function<B(A)> const_(B b) { return [=](A _) { return b; }; }
 
 // --------------------------------------------------------------------------------------------------------
 // Symbols
